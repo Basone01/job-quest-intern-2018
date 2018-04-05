@@ -1,0 +1,1 @@
+export const JOKE_API_END_POINT = "http://api.icndb.com/jokes/";
