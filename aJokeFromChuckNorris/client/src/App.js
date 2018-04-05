@@ -44,7 +44,7 @@ const enhance = compose(
     componentDidMount() {
       console.log("recompose");
 
-      this.props.fetchJokeById(1);
+      this.props.fetchJokeById(102);
     }
   })
 );
