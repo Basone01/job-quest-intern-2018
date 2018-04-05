@@ -11,6 +11,10 @@ const getFromAPI = async url => {
   }
 };
 
+const getAllJokes = () =>{
+  return getFromAPI();
+}
+
 const getRandomJoke = () => {
   return getFromAPI("random");
 };
@@ -20,6 +24,7 @@ const getJokebyId = async id => {
 };
 
 module.exports = {
+  getAllJokes,
   getJokebyId,
   getRandomJoke
 };
