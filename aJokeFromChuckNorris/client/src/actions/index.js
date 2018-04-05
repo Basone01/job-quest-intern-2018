@@ -1,0 +1,1 @@
+export { fetchAllJokes,fetchJokeById } from './jokes'
