@@ -36,7 +36,7 @@ const componentName = props => {
 const enhance = compose(
   connect(
     state => ({
-      jokes: state.jokes
+      jokes: state.jokes.jokes
     }),
     { fetchAllJokes, fetchJokeById }
   ),

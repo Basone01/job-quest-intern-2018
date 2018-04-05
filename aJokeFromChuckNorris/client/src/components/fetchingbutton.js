@@ -1,19 +1,10 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
+import { withProps, compose } from "recompose";
+import { connect } from "react-redux";
+import { fetchAllJokes } from "../actions/";
 
-class FetchingButton extends Component {
+const FetchingButton = props => {
+  return <button onClick={() => props.fetchAllJokes()}>FetchAllJokes</button>;
+};
 
-    handleClick(){
-        console.log(123);
-        
-    }
-
-    render () {
-        return (
-            <button onClick={this.handleClick}>
-                ClickMe
-            </button>
-        )
-    }
-}
-
-export default FetchingButton
+export default connect(null, { fetchAllJokes })(FetchingButton);
