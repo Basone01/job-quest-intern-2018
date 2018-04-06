@@ -13,3 +13,10 @@ export const Wrapper = styled.div`
   border-radius: 12px;
   box-shadow: 1px 2px 4px black;
 `;
+
+export const Button = styled.button`
+  border-radius:1em;
+  margin:0.5em;
+  outline:none;
+  user-select:none;
+`
