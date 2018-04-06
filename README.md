@@ -37,8 +37,7 @@ const shift = (array = [], direction = "left", times = 1) => {
 - 2.4 Find the hero who got the worst **kill/death ratio** (ratio = kill/death)
 
 Answer:
-```
--- insert your answer here
+```js
 const heros = require("./hero.json");
 
 const getProperty = (hero, property) => hero[property];
