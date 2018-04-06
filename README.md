@@ -15,7 +15,6 @@ Code must be writted in Javascript language. The code will be tested with Node8,
 ```
 Answer:
 ```
--- insert your answer here
 const shift = (array = [], direction = "left", times = 1) => {
   const moddedTimes = times % array.length;
   let shiftedArray =
