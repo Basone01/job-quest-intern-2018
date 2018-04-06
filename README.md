@@ -14,7 +14,7 @@ Code must be writted in Javascript language. The code will be tested with Node8,
 [3, 4, 5, 1, 2]
 ```
 Answer:
-```
+
 const shift = (array = [], direction = "left", times = 1) => {
   const moddedTimes = times % array.length;
   let shiftedArray =
@@ -29,7 +29,7 @@ const shift = (array = [], direction = "left", times = 1) => {
   return shiftedArray;
 };
 
-```
+
 2. Download [hero.json](https://github.com/takemetour/job-quest-intern-2018/blob/master/hero.json) and write a code to caculate these values from **hero.json**
 - 2.1 Average **networth** of all heroes
 - 2.2 Average **level** for hero that has 'intelligent' as **primary_attribute**
