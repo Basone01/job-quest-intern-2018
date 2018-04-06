@@ -3,13 +3,13 @@ import styled from "styled-components";
 import { connect } from "react-redux";
 import { Wrapper } from "./components/styled";
 import { JokeList, FetchingButton, RenameButton } from "./components/";
-
+import Title from "./components/title";
 class App extends Component {
   render() {
     return (
       <Wrapper>
-        <h1>Chuck Norris</h1>
-        <RenameButton/>
+        <Title />
+        <RenameButton />
         <FetchingButton />
         <JokeList />
       </Wrapper>
