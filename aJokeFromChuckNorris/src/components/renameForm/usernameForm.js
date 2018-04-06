@@ -1,8 +1,18 @@
 import React from "react";
 import { connect } from "react-redux";
 import { compose, withHandlers } from "recompose";
-import { Button } from "../styled";
+import { Button, Flex } from "../styled";
 import { submitUsername } from "../../actions/name";
+/*===================Styled===================*/
+const BorderedFlex = Flex.extend`
+  border: 1px solid black;
+  border-radius:1em;
+  padding:1em;
+  margin-bottom:1em;
+`;
+
+
+/*======================================*/
 const enhance = compose(
   connect(
     state => ({
@@ -19,6 +29,7 @@ const enhance = compose(
         [event.target[1].name]: event.target[1].value
       };
       props.submitUsername(username);
+      props.afterSubmit();
     }
   })
 );
@@ -26,9 +37,12 @@ const enhance = compose(
 const UsernameForm = props => {
   return (
     <form onSubmit={props.onSubmit}>
-      <input type="text" name="firstName" placeholder="Firstname" />
-      <input type="text" name="lastName" placeholder="Lastname" />
-      <Button type="submit"> Let's Joke!! </Button>
+      <BorderedFlex fd="column" ali="center">
+      <label>FirstName: <input type="text" name="firstName" placeholder="Firstname" /></label>
+        <label>LastName: <input type="text" name="lastName" placeholder="Lastname" /></label>
+        {props.s}
+        <Button type="submit"> Let's Joke!! </Button>
+      </BorderedFlex>
     </form>
   );
 };
