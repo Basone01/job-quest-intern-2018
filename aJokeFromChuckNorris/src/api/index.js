@@ -22,7 +22,7 @@ export const getAllJokes = options => {
   return getFromAPI("", options);
 };
 
-export const getRandomJoke = options => {
+export const getRandomJokes = options => {
   return getFromAPI("random", options);
 };
 
