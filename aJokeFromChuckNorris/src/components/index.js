@@ -1,5 +1,5 @@
-import FetchingButton from "./fetchingbutton";
+import { FetchAllButton, FetchRandomButton } from "./fetchingbutton";
 import JokeList from "./jokeList";
 import RenameForm from "./renameForm";
 
-export { FetchingButton, JokeList, RenameForm };
+export { FetchAllButton, FetchRandomButton, JokeList, RenameForm };

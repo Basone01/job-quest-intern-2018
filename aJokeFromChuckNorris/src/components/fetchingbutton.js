@@ -1,13 +1,29 @@
 import React, { Component } from "react";
 import { withProps, compose } from "recompose";
 import { connect } from "react-redux";
-import { fetchAllJokes } from "../actions/";
+import { fetchAllJokes, fetchRandomJokes } from "../actions/";
 import { Button } from "./styled";
 
 const FetchingButton = props => {
-  return <Button onClick={() => props.fetchAllJokes(props.name)}>FetchAllJokes</Button>;
+  return (
+    <Button onClick={() => props.fetchFunct(props.name)}>{props.text}</Button>
+  );
 };
 
-export default connect(state => ({ name: state.name }), { fetchAllJokes })(
-  FetchingButton
-);
+export const FetchAllButton = compose(
+  connect(state => ({ name: state.name }), {
+    fetchFunct: fetchAllJokes
+  }),
+  withProps({
+    text: "FetchAllJokes"
+  })
+)(FetchingButton);
+
+export const FetchRandomButton = compose(
+  connect(state => ({ name: state.name }), {
+    fetchFunct: fetchRandomJokes
+  }),
+  withProps({
+    text: "FetchRandomJokes"
+  })
+)(FetchingButton);

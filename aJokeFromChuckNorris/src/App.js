@@ -2,7 +2,12 @@ import React, { Component } from "react";
 import styled from "styled-components";
 import { connect } from "react-redux";
 import { Wrapper } from "./components/styled";
-import { JokeList, FetchingButton, RenameForm } from "./components/";
+import {
+  JokeList,
+  FetchAllButton,
+  FetchRandomButton,
+  RenameForm
+} from "./components/";
 import Title from "./components/title";
 class App extends Component {
   render() {
@@ -10,7 +15,8 @@ class App extends Component {
       <Wrapper>
         <Title />
         <RenameForm />
-        <FetchingButton />
+        <FetchAllButton />
+        <FetchRandomButton/>
         <JokeList />
       </Wrapper>
     );
