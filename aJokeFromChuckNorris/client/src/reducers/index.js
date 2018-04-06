@@ -1,8 +1,10 @@
 import { combineReducers } from "redux";
 import jokes from "./jokes";
+import name from './name'
 
 const mainReducer = combineReducers({
-    jokes
+    jokes,
+    name
 })
 
 export default mainReducer;
