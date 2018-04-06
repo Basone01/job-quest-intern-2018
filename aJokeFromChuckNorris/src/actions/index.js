@@ -1,1 +1,1 @@
-export { fetchAllJokes,fetchJokeById } from './jokes'
+export { fetchAllJokes,fetchJokeById,fetchRandomJokes } from './jokes'
