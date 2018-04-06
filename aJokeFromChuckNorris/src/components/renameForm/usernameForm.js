@@ -1,8 +1,8 @@
 import React from "react";
 import { connect } from "react-redux";
 import { compose, withHandlers } from "recompose";
-import { Button } from "./styled";
-import { submitUsername } from "../actions/name";
+import { Button } from "../styled";
+import { submitUsername } from "../../actions/name";
 const enhance = compose(
   connect(
     state => ({
@@ -18,7 +18,6 @@ const enhance = compose(
         [event.target[0].name]: event.target[0].value,
         [event.target[1].name]: event.target[1].value
       };
-
       props.submitUsername(username);
     }
   })
