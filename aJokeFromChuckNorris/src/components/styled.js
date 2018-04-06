@@ -14,9 +14,16 @@ export const Wrapper = styled.div`
   box-shadow: 1px 2px 4px black;
 `;
 
+export const Flex = styled.div`
+  display: flex;
+  flex-direction: ${props => props.fd || "row"};
+  justify-content: ${props => props.jc || "flex-start"};
+  align-items: ${props => props.ali || "stretch"};
+`;
+
 export const Button = styled.button`
-  border-radius:1em;
-  margin:0.5em;
-  outline:none;
-  user-select:none;
-`
+  border-radius: 1em;
+  margin: 0.5em;
+  outline: none;
+  user-select: none;
+`;
