@@ -27,3 +27,7 @@ export const Button = styled.button`
   outline: none;
   user-select: none;
 `;
+
+export const Quote = styled.p`
+  text-indent:2em;
+`
