@@ -11,12 +11,14 @@ const fetchAllJokesSuccess = jokes => {
 };
 
 
-export const fetchAllJokes = () => async dispatch => {
+export const fetchAllJokes = (options) => async dispatch => {
   console.log("fetchingAllJokes");
+  console.log(options);
+  
   const action = fetchAllJokesRequest();
   dispatch(action);
   try {
-    const AllJokes = await getAllJokes();
+    const AllJokes = await getAllJokes(options);
     return dispatch(fetchAllJokesSuccess(AllJokes));
   } catch (error) {
     return dispatch(foundAnError(action.type, error.message));
