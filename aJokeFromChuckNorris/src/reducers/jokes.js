@@ -5,6 +5,11 @@ const initialState = { jokes: [] };
 export default function jokesReducer(state = initialState, action) {
   const { jokes } = state;
   switch (action.type) {
+    case types.FETCH_ALL_JOKES_REQUESTED:
+      return {
+        ...state,
+        jokes: []
+      };
     case types.FETCH_ALL_JOKES_SUCCESSED:
       return {
         ...state,
@@ -14,6 +19,14 @@ export default function jokesReducer(state = initialState, action) {
       return {
         ...state,
         jokes: [...jokes, action.payload].sort((a, b) => a.id < b.id)
+      };
+    case types.FETCH_RANDOM_JOKES_SUCCESSED:
+      return {
+        ...state,
+        jokes: [
+          action.payload,
+          ...jokes.filter(joke => joke.id !== action.payload.id)
+        ]
       };
     default:
       return state;
