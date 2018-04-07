@@ -8,8 +8,7 @@ export const Wrapper = styled.div`
   max-width: 360px;
   min-height: 480px;
   padding: 2em;
-  margin: auto;
-  margin-top: 2em;
+  margin: 2em auto;
   border-radius: 12px;
   box-shadow: 1px 2px 4px black;
 `;
