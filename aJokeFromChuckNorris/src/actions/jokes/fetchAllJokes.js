@@ -10,9 +10,9 @@ const fetchAllJokesSuccess = jokes => {
   };
 };
 
-export const fetchAllJokes = options => async (dispatch, getState) => {
+export const fetchAllJokes = () => async (dispatch, getState) => {
   console.log("fetchingAllJokes");
-  const { options: name } = getState();
+  const options = getState().name;
   const action = fetchAllJokesRequest();
   dispatch(action);
   try {
