@@ -8,22 +8,22 @@ const JokeItem = props => {
   const { id, joke, catagories } = props;
   return (
     <div>
-      <h2>{id}</h2>
-      <Quote dangerouslySetInnerHTML={{__html: joke}}></Quote>
-      
+      <h2>#{id}</h2>
+      <Quote dangerouslySetInnerHTML={{ __html: joke }} />
       <hr />
     </div>
   );
 };
 
 const enhance = compose(
-  connect(state => ({ jokes: state.jokes.jokes }), { fetchJokeById })
+  connect(state => ({ jokes: state.jokes.jokes }), { fetchJokeById }),
+  withProps(props => ({
+    jokes: props.jokes.map(joke => <JokeItem key={joke.id} {...joke} />)
+  }))
 );
 
-const JokeList = props => {
-  return (
-    <Flex fd="column">{props.jokes.map(joke => <JokeItem key={joke.id} {...joke} />)}</Flex>
-  );
+const JokeList = ({ jokes }) => {
+  return <Flex fd="column">{jokes}</Flex>;
 };
 
 export default enhance(JokeList);
