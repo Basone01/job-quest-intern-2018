@@ -13,10 +13,9 @@ const fetchRandomJokesSuccess = jokes => {
   };
 };
 
-export const fetchRandomJokes = options => async dispatch => {
+export const fetchRandomJokes = options => async (dispatch, getState) => {
   console.log("fetchingRandomJokes");
-  console.log(options);
-
+  const { options: name } = getState();
   const action = fetchRandomJokesRequest();
   dispatch(action);
   try {

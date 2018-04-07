@@ -13,8 +13,9 @@ const fetchJokeByIdSuccess = joke => {
   };
 };
 
-export const fetchJokeById = (id, options) => async dispatch => {
+export const fetchJokeById = (id, options) => async (dispatch, getState) => {
   console.log(`fetching a Joke id:${id}`);
+  const { options: name } = getState();
   const action = fetchJokeByIdRequest(id);
   dispatch(action);
   try {

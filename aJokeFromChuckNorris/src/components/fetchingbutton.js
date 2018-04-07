@@ -11,7 +11,7 @@ const FetchingButton = props => {
 };
 
 export const FetchAllButton = compose(
-  connect(state => ({ name: state.name }), {
+  connect(null, {
     fetchFunct: fetchAllJokes
   }),
   withProps({
@@ -20,7 +20,7 @@ export const FetchAllButton = compose(
 )(FetchingButton);
 
 export const FetchRandomButton = compose(
-  connect(state => ({ name: state.name }), {
+  connect(null, {
     fetchFunct: fetchRandomJokes
   }),
   withProps({
