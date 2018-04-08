@@ -124,9 +124,10 @@ A2: Less learning time and more idea from another platform, make mobile dev can 
 
 Q3: What do you expect to get from during an internship at TakeMeTour?
 
-A3: 1. Coding javascript as your stack.
-    2. I've leant many techniqe from your developer's blogs, It's great and I need more.
-    3. Not just technique but this will be my first time of internship, I need to learn everthing that you thing a developer should be.
+A3: 
+  1. Coding javascript as your stack.
+  2. I've leant many techniqe from your developer's blogs, It's great and I need more.
+  3. Not just technique but this will be my first time of internship, I need to learn everthing that you thing a developer should be.
     
 
 ## Submitting
