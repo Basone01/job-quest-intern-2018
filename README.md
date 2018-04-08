@@ -113,21 +113,21 @@ This part of quest will be a challenging one. You are going to make a simple web
 
 ## Questions
 Q1: What is GraphQL and how it is different from REST API?
-
+```
 A1: It like a new abstraction layer on the API, make the client can tell the API what data they need and what they need it to be like ( how many field, what field that they need , how depth of data ), by send these format to the API , then the API will find the data and format it as the client need , and everything happend in just 1 request and 1 API endpoint ( avoid the naming problem haha~ ).  
 
 Many features of GraphQL are hard to implements in REST API, in rest api clients can tell what they need too (but it will not end in 1 endpoint), but it will be hard to implemtents if you have many data.
-
+```
 Q2: Please explain how javascript benefits from cross-platform development
-
+```
 A2: Less learning time and more idea from another platform, make mobile dev can thing like web dev, and make web dev can thing like mobile dev.
-
+```
 Q3: What do you expect to get from during an internship at TakeMeTour?
-
+```
 A3: 1. Coding javascript as your stack.
     2. I've leant many techniqe from your developer's blogs, It's great and I need more.
     3. Not just technique but this will be my first time of internship, I need to learn everthing that you thing a developer should be.
-    
+```  
 
 ## Submitting
 
