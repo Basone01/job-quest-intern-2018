@@ -1,10 +1,12 @@
 import { combineReducers } from "redux";
-import jokes from "./jokes";
-import name from './name'
+import jokesReducer from "./jokes";
+import nameReducer from "./name";
+import errorReducer from "./error";
 
 const mainReducer = combineReducers({
-    jokes,
-    name
-})
+  jokes:jokesReducer,
+  name:nameReducer,
+  error:errorReducer
+});
 
 export default mainReducer;
