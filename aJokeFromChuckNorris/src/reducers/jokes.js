@@ -30,6 +30,11 @@ export default function jokesReducer(state = initialState, action) {
           ...jokes.filter(joke => joke.id !== action.payload.id)
         ]
       };
+    case types.CLEAR_ALL_JOKES:
+      return {
+        ...state,
+        jokes: []
+      };
     default:
       return state;
   }

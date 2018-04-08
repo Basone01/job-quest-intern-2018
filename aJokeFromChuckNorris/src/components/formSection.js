@@ -8,12 +8,16 @@ import {
   FetchByIdForm,
   ErrorBox
 } from "./";
+import ClearButton from "./clearButton";
 
 const FormSection = ({ isError }) => {
   return (
     <Flex fd="column" ali="center">
       <RenameForm />
-      <FetchAllButton />
+      <Flex>
+        <FetchAllButton />
+        <ClearButton />
+      </Flex>
       <FetchRandomButton />
       <FetchByIdForm />
       {isError && <ErrorBox />}
