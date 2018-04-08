@@ -114,7 +114,7 @@ This part of quest will be a challenging one. You are going to make a simple web
 ## Questions
 Q1: What is GraphQL and how it is different from REST API?
 
-A1: It like a new abstraction layer on the API, make the client can tell the API what data they need and what they need it to be like ( how many field, what field that they need , how deep of data ), by send these format to the API , then the API will find the data and format it as the client need , and everything happend in just 1 request and 1 API endpoint ( avoid the naming problem haha~ ).  
+A1: It like a new abstraction layer on the API, make the client can tell the API what data they need and what they need it to be like ( how many field, what field that they need , how depth of data ), by send these format to the API , then the API will find the data and format it as the client need , and everything happend in just 1 request and 1 API endpoint ( avoid the naming problem haha~ ).  
 
 Many features of GraphQL are hard to implements in REST API, in rest api clients can tell what they need too, but it will be hard to implemtents if you have many data , at first you have to name your api endpoint for every data, and you have to coding to merge many data to the client need's format in every format of data. Or you can push this problem to the clients side, by let they send many request for merge it one data on the clients side.
 
