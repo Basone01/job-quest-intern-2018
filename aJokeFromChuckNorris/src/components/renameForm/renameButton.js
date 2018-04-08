@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { compose, withState, withHandlers } from "recompose";
 import { connect } from "react-redux";
-import { fetchAllJokes } from "../../actions/";
 import { Button, Flex } from "../styled";
 import UsernameForm from "./usernameForm";
 const enhance = compose(

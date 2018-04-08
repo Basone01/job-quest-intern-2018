@@ -13,7 +13,7 @@ export const FetchAllButton = compose(
     fetchFunct: fetchAllJokes
   }),
   withProps({
-    text: "FetchAllJokes"
+    text: "Fetch All Jokes"
   })
 )(FetchingButton);
 
@@ -22,6 +22,6 @@ export const FetchRandomButton = compose(
     fetchFunct: fetchRandomJokes
   }),
   withProps({
-    text: "FetchRandomJokes"
+    text: "Fetch Random Jokes"
   })
 )(FetchingButton);
