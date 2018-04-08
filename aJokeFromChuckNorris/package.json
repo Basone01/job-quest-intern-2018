@@ -22,5 +22,5 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
-  "homepage": "https://basone01.github.io/ajokefromchucknorris"
+  "homepage": "https://basone01.github.io/job-quest-intern-2018/"
 }
