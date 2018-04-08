@@ -7,7 +7,7 @@ const initialState = {
   lastName: "Norris"
 };
 
-export default function jokesReducer(state = initialState, action) {
+export default function nameReducer(state = initialState, action) {
   switch (action.type) {
     case CHANGE_CHARACTER_NAME:
       if (!action.payload) return state;
