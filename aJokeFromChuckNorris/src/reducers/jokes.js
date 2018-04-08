@@ -1,5 +1,4 @@
 import * as types from "../constants/actionTypes";
-import { getAllJokes } from "../api";
 const initialState = { jokes: [] };
 
 export default function jokesReducer(state = initialState, action) {
@@ -18,7 +17,10 @@ export default function jokesReducer(state = initialState, action) {
     case types.FETCH_JOKE_BY_ID_SUCCESSED:
       return {
         ...state,
-        jokes: [...jokes, action.payload].sort((a, b) => a.id < b.id)
+        jokes: [
+          action.payload,
+          ...jokes.filter(joke => joke.id !== action.payload.id)
+        ]
       };
     case types.FETCH_RANDOM_JOKES_SUCCESSED:
       return {

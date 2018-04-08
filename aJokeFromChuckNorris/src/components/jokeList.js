@@ -1,11 +1,23 @@
 import React from "react";
-import { compose, mapProps, lifecycle, withProps } from "recompose";
+import { compose, withProps } from "recompose";
 import { connect } from "react-redux";
 import { fetchJokeById } from "../actions/";
 import { Quote, Flex } from "./styled";
 
+const JokesBox = Flex.extend`
+  flex-grow: 1;
+  align-self: stretch;
+  max-height: 250px;
+  overflow-y: scroll;
+  position: relative;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+`;
+
 const JokeItem = props => {
-  const { id, joke, catagories } = props;
+  const { id, joke } = props;
   return (
     <div>
       <h2>#{id}</h2>
@@ -23,7 +35,7 @@ const enhance = compose(
 );
 
 const JokeList = ({ jokes }) => {
-  return <Flex fd="column">{jokes}</Flex>;
+  return <JokesBox fd="column">{jokes}</JokesBox>;
 };
 
 export default enhance(JokeList);

@@ -1,22 +1,16 @@
 import React, { Component } from "react";
-import styled from "styled-components";
-import { connect } from "react-redux";
 import { Wrapper } from "./components/styled";
-import {
-  JokeList,
-  FetchAllButton,
-  FetchRandomButton,
-  RenameForm
-} from "./components/";
+import { JokeList } from "./components/";
 import Title from "./components/title";
+import ErrorBox from "./components/errorBox";
+import FormSection from "./components/formSection";
+
 class App extends Component {
   render() {
     return (
       <Wrapper>
         <Title />
-        <RenameForm />
-        <FetchAllButton />
-        <FetchRandomButton/>
+        <FormSection />
         <JokeList />
       </Wrapper>
     );

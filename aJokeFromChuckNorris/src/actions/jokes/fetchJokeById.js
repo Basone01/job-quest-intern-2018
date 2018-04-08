@@ -1,8 +1,8 @@
 import * as types from "../../constants/actionTypes";
 import { getJokebyId } from "../../api";
-import { foundAnError } from "../error";
+import { foundAnError, clearError } from "../error";
 
-const fetchJokeByIdRequest = (id) => ({
+const fetchJokeByIdRequest = id => ({
   type: types.FETCH_JOKE_BY_ID_REQUESTED
 });
 const fetchJokeByIdSuccess = joke => {
@@ -13,9 +13,10 @@ const fetchJokeByIdSuccess = joke => {
   };
 };
 
-export const fetchJokeById = (id) => async (dispatch, getState) => {
+export const fetchJokeById = id => async (dispatch, getState) => {
   console.log(`fetching a Joke id:${id}`);
   const options = getState().name;
+  dispatch(clearError());
   const action = fetchJokeByIdRequest(id);
   dispatch(action);
   try {
