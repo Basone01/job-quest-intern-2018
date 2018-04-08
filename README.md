@@ -120,7 +120,7 @@ Many features of GraphQL are hard to implements in REST API, in rest api clients
 
 Q2: Please explain how javascript benefits from cross-platform development
 
-A2: Less learning time and more idea from another platform, make mobile dev can thing like web dev, and make web dev can thing like mobile dev.
+A2: Less learning time and more idea from another platform, make mobile dev can thing like web dev, and make web dev can thing like mobile dev, and make some project can share code to another platform and reuse it.
 
 Q3: What do you expect to get from during an internship at TakeMeTour?
 
