@@ -1,5 +1,13 @@
-import { FetchAllButton, FetchRandomButton } from "./fetchingbutton";
+import { FetchAllButton, FetchRandomButton } from "./fetchingButton";
 import JokeList from "./jokeList";
 import RenameForm from "./renameForm";
-
-export { FetchAllButton, FetchRandomButton, JokeList, RenameForm };
+import FetchByIdForm from "./fetchByIdForm";
+import ErrorBox from "./errorBox";
+export {
+  FetchAllButton,
+  FetchRandomButton,
+  FetchByIdForm,
+  JokeList,
+  RenameForm,
+  ErrorBox
+};
