@@ -1,10 +1,10 @@
 import React from "react";
-import { Button } from "./styled";
+import { Button } from "react-bootstrap";
 import { clearAllJokes } from "../actions";
 import { connect } from "react-redux";
 
-const ClearButton = ({ clearAllJokes }) => {
-  return <Button onClick={() => clearAllJokes()}>Clear All Jokes</Button>;
+const ClearButton = ({ clearAllJokes,children }) => {
+  return <Button onClick={() => clearAllJokes()}>{children}</Button>;
 };
 
 export default connect(null, { clearAllJokes })(ClearButton);

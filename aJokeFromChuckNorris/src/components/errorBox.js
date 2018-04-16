@@ -1,11 +1,12 @@
 import React from "react";
 import { connect } from "react-redux";
 import { compose } from "recompose";
-import { Flex } from "./styled";
+import {Alert} from 'react-bootstrap';
 const enhance = compose(
   connect(
     state => ({
-      errorMessage: state.error.message
+      errorMessage: state.error.message,
+      isError:state.error.isError
     }),
     null
   )
@@ -13,9 +14,7 @@ const enhance = compose(
 
 const ErrorBox = ({ isError, errorMessage }) => {
   return (
-    <Flex dir="row" jc="space-around" ali="baseline" >
-      <p>Error: {errorMessage}</p>
-    </Flex>
+    isError&&<Alert bsStyle="danger">Error: {errorMessage}</Alert>
   );
 };
 

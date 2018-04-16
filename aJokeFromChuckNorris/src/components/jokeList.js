@@ -1,41 +1,27 @@
 import React from "react";
-import { compose, withProps } from "recompose";
-import { connect } from "react-redux";
-import { fetchJokeById } from "../actions/";
-import { Quote, Flex } from "./styled";
-
-const JokesBox = Flex.extend`
-  flex-grow: 1;
-  align-self: stretch;
-  max-height: 250px;
-  overflow-y: scroll;
-  position: relative;
-
-  &::-webkit-scrollbar {
-    display: none;
-  }
-`;
+import {compose, withProps} from "recompose";
+import {connect} from "react-redux";
+import {fetchJokeById} from "../actions/";
+import {ListGroup, ListGroupItem} from 'react-bootstrap'
 
 const JokeItem = props => {
-  const { id, joke } = props;
+  const {id, joke} = props;
+  const noQuotEntityJoke = joke.split("&quot;").join('"');
   return (
-    <div>
-      <h2>#{id}</h2>
-      <Quote dangerouslySetInnerHTML={{ __html: joke }} />
-      <hr />
-    </div>
+    <ListGroupItem header={`#${id}`}>
+      {noQuotEntityJoke}
+    </ListGroupItem>
   );
 };
 
-const enhance = compose(
-  connect(state => ({ jokes: state.jokes.jokes }), { fetchJokeById }),
-  withProps(props => ({
-    jokes: props.jokes.map(joke => <JokeItem key={joke.id} {...joke} />)
-  }))
-);
+const enhance = compose(connect(state => ({jokes: state.jokes.jokes}), {fetchJokeById}), withProps(props => ({
+  jokes: props
+    .jokes
+    .map(joke => <JokeItem key={joke.id} {...joke}/>)
+})));
 
-const JokeList = ({ jokes }) => {
-  return <JokesBox fd="column">{jokes}</JokesBox>;
+const JokeList = ({jokes}) => {
+  return <ListGroup>{jokes}</ListGroup>;
 };
 
 export default enhance(JokeList);
