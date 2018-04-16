@@ -3,12 +3,7 @@ import {JokeList, RenameForm, FetchByIdForm, ErrorBox} from "./components/";
 import AppTitle from "./components/title";
 import JokeButtonGroup from "./components/jokeButtonGroup";
 import {Grid, Row, Col, Panel} from 'react-bootstrap';
-import styled, {injectGlobal} from 'styled-components'
-injectGlobal `
-  *{
-    /* border:1px solid black; */
-  }
-`;
+import styled from 'styled-components'
 
 const Wrapper = styled.div `
   width:100%;
