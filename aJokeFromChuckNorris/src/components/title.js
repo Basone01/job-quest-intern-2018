@@ -1,11 +1,6 @@
 import React from "react";
 import { compose } from "recompose";
 import { connect } from "react-redux";
-import styled from 'styled-components';
-
-const StyledTitle = styled.h4`
-  text-align:center;
-`
 
 const enhance = compose(
   connect(state => ({
@@ -16,9 +11,9 @@ const enhance = compose(
 const Title = props => {
   const { firstName, lastName } = props.name;
   return (
-    <StyledTitle>
+    <h4 className="text-center">
       {firstName} {lastName}'s Jokes
-    </StyledTitle>
+    </h4>
   );
 };
 
